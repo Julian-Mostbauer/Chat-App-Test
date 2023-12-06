@@ -3,7 +3,6 @@ export default function ChatSendBox() {
     <>
       <form>
         <label>
-          Your Message: 
           <input type="text" name="name" />
         </label>
         <input type="submit" value="Send" />

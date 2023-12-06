@@ -21,14 +21,7 @@
   border-style: solid;
   border-color: #61dafbaa;
   
-  
-  /* position: absolute; */
-  /* width: 94%; */
-  height:min-content;
-
-
-  transition: all ease-in-out 0.2s;
-  
+  transition: all ease-in-out 0.2s;  
 }
 
 
@@ -37,6 +30,7 @@
   border-color: #6192fbaa;
   
   transition: all ease-in-out 0.2s;
+
 }
 
 .ChatArea{
@@ -44,6 +38,21 @@
   border-style: solid;
   border-color: #61dafbaa;
 
+  
+  animation-name: spin;
+  animation-duration: 5ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+
   margin-top: 1rem;
   padding: 2rem;
+
+}
+
+@keyframes spin {
+  from{
+    transform: rotate(-36035deg);
+  }to{
+    transform: rotate(36035deg);
+  }
 }
