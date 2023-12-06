@@ -9,7 +9,6 @@ import ChatData from './components/ChatData'
 import ChatSendBox from './components/ChatSendBox'
 
 function App() {
-  
   const [chatData, setChatData] = useState(new ChatData("0", [], []));
 
   useEffect(() => {
@@ -27,6 +26,7 @@ function App() {
       <ChatTitleBar Name={chatData.chat_id}/>
       <ChatArea Data={chatData}/>
       <ChatSendBox/>
+      
     </>
   )
 }
