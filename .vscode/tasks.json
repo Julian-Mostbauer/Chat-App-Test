@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"path": "Chat-App-Test",
+			"problemMatcher": [],
+			"label": "npm: dev - Chat-App-Test",
+			"detail": "vite",
+			"group": "test"
+		},
+		{
+			"type": "npm",
+			"script": "install",
+			"path": "Chat-App-Test",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "npm: install - Chat-App-Test",
+			"detail": "install dependencies from package"
+		}
+	]
+}
