@@ -2,12 +2,12 @@
   "chat_id": "123456789",
   "participants": [
     {
-      "name": "Alice",
+      "name": "Errik",
       "id": "111111111",
       "avatar": "alice.jpg"
     },
     {
-      "name": "Bob",
+      "name": "Alter Erik",
       "id": "222222222",
       "avatar": "bob.jpg"
     }
@@ -15,12 +15,12 @@
   "messages": [
     {
       "sender_id": "111111111",
-      "text": "Hi Bob, how are you?",
+      "text": "Hi Alter Erik, how are you?",
       "timestamp": "2023-12-06T08:30:00Z"
     },
     {
       "sender_id": "222222222",
-      "text": "Hi Alice, I'm good, thanks. How about you?",
+      "text": "Hi Erik, I'm good, thanks. How about you?",
       "timestamp": "2023-12-06T08:31:00Z"
     },
     {

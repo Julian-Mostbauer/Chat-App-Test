@@ -22,7 +22,6 @@ function App() {
     fetchData();
   }, []);
 
-
   return (
     <>
       <ChatTitleBar Name={chatData.chat_id}/>

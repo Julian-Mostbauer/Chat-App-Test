@@ -39,8 +39,10 @@
   border-color: #61dafbaa;
 
   
-  animation-name: warp;
-  animation-duration: 5000ms;
+  /* animation-name: warp; */
+  /* animation-name: spin; */
+  animation-duration: 10000ms;
+
   animation-iteration-count: infinite;
   animation-timing-function: linear; 
 
@@ -58,5 +60,9 @@
 }
 
 @keyframes warp {
-  
+  from{
+    transform:skew(-100deg,-100deg);
+  }to{
+    transform: skew(100deg,100deg);
+  }
 }
