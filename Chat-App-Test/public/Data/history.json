@@ -4,43 +4,43 @@
   "participants": [
     {
       "name": "Erik",
-      "id": "111111111",
+      "id": "1",
       "avatar": "alice.jpg"
     },
     {
       "name": "Alter Erik",
-      "id": "222222222",
+      "id": "2",
       "avatar": "bob.jpg"
     }
   ],
   "messages": [
     {
-      "sender_id": "111111111",
+      "sender_id": "1",
       "text": "Hi Alter Erik, how are you?",
       "timestamp": "2023-12-06T08:30:00Z"
     },
     {
-      "sender_id": "222222222",
+      "sender_id": "2",
       "text": "Hi Erik, I'm good, thanks. How about you?",
       "timestamp": "2023-12-06T08:31:00Z"
     },
     {
-      "sender_id": "111111111",
+      "sender_id": "1",
       "text": "I'm fine, just busy with work. You have changed",
       "timestamp": "2023-12-06T08:32:00Z"
     },
     {
-      "sender_id": "222222222",
+      "sender_id": "2",
       "text": "?",
       "timestamp": "2023-12-06T08:33:00Z"
     },
     {
-      "sender_id": "111111111",
+      "sender_id": "1",
       "text": "No.",
       "timestamp": "2023-12-06T08:34:00Z"
     },
     {
-      "sender_id": "222222222",
+      "sender_id": "2",
       "text": "Yes",
       "timestamp": "2023-12-06T08:35:00Z"
     }

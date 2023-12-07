@@ -1,23 +1,27 @@
-import ChatData from "./ChatData";
-
 interface props {
   Data: {sender_id: string; text: string; timestamp: string };
+  Participants: { name: string; id: string; avatar: string }[];
+  CurrentUser_id: string
 }
 
 export default function Message(Input: props) {
   const data = Input.Data;
+  const name = name_from_id(Input.Participants, data.sender_id);
+  const owner_status = data.sender_id == Input.CurrentUser_id ? "Self" : "Other";
   return (
     <>
-      <h1>{data.text}</h1>
-      <h1>{data.text}</h1>
+    <div className={"MessageContainer-" + owner_status}>
+      <p className={"MessageSenderName-" + owner_status}>{name}</p>
+      <p className={"MessageContent-" + owner_status}>{data.text}</p>
+    </div>
     </>
   );
 
 }
 
-function name_from_id(data: ChatData, id: string) {
+function name_from_id(participant_data: { name: string; id: string; avatar: string }[], id: string) {
   let search_result = "error - unable to find sender";
-  data.participants.forEach((participant) => {
+  participant_data.forEach((participant) => {
     if (participant.id == id) {
       search_result = participant.name;
     }

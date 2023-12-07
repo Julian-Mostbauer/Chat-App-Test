@@ -8,7 +8,7 @@ export default function ChatArea(Input: props) {
  
   const chat_history = Input.Data.messages.map(message => 
     <ul key={message.timestamp}>
-      <Message Data={Input.Data.messages}/>
+      <Message Data={message} Participants={Input.Data.participants} CurrentUser_id='1'/>
     </ul>
   )
 

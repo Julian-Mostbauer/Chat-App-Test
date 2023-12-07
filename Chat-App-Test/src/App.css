@@ -6,6 +6,10 @@
   padding: 2rem;
   text-align: center;
 
+  font-weight: bold;
+
+  /* text-shadow: 0px 1px 0px black; */
+
 }
 
 .card {
@@ -19,15 +23,19 @@
 .ChatTitleBarContainer{
   border-radius: 1rem;
   border-style: solid;
-  border-color: #61dafbaa;
+  border-color: #CDB4DB;
   
+  background-color: #FFC8DD;
+  border-style: ridge;
+
+  color: black;
   transition: all ease-in-out 0.2s;  
 }
 
 
 .ChatTitleBarContainer:hover{
-  opacity: 50%;
-  border-color: #6192fbaa;
+  opacity: 70%;
+  /* border-color: #6192fbaa; */
   
   transition: all ease-in-out 0.2s;
 
@@ -36,18 +44,22 @@
 .ChatArea{
   border-radius: 1rem;
   border-style: solid;
-  border-color: #61dafbaa;
+  border-color: #CDB4DB;
 
-  
-  /* animation-name: warp; */
-  /* animation-name: spin; */
-  animation-duration: 10000ms;
-
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+  background-color: #FFC8DD;
 
   margin-top: 1rem;
-  padding: 2rem;
+  padding: 1rem;
+
+  border-style: ridge;
+
+  /* animation-name: warp; */
+  /* animation-name: spin; */
+  /* animation-duration: 10000ms; */
+
+  /* animation-iteration-count: infinite; */
+  /* animation-timing-function: linear;  */
+
 
 }
 
@@ -65,4 +77,55 @@
   }to{
     transform: skew(100deg,100deg);
   }
+}
+
+.MessageContainer-Self{
+  background-color: #A2D2FF;
+  border-color: #BDE0FE;
+  
+  border-radius: 1rem;
+  border-style: ridge;
+  
+  width: fit-content;
+  padding: 0.5rem;
+
+  min-width: 10rem;
+  
+  margin-left: auto;
+}
+.MessageContainer-Other{
+  background-color: #FFAFCC;
+  border-color: #FFC8DD;
+  
+  border-radius: 1rem;
+  border-style: ridge;
+  
+  min-width: 10rem;
+
+  width: fit-content;
+  padding: 0.5rem;
+}
+
+.MessageSenderName-Self{
+  /* padding-bottom: 1rem; */
+  font-size: x-small;
+  color: #003566;
+
+  text-align: right;
+}
+.MessageSenderName-Other{
+  /* padding-bottom: 1rem; */
+  font-size: x-small;
+  color: #660025;
+  
+  text-align: left;
+}
+
+.MessageContent-Self {
+  text-align: right;
+  color: #003566;
+}
+.MessageContent-Other{
+  text-align: left;
+  color: #3D0016;
 }
