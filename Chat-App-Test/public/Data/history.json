@@ -1,5 +1,6 @@
 {
   "chat_id": "123456789",
+  "chat_name": "Erik - Alter Erik",
   "participants": [
     {
       "name": "Erik",
@@ -25,22 +26,22 @@
     },
     {
       "sender_id": "111111111",
-      "text": "I'm fine, just busy with work. What are you up to?",
+      "text": "I'm fine, just busy with work. You have changed",
       "timestamp": "2023-12-06T08:32:00Z"
     },
     {
       "sender_id": "222222222",
-      "text": "Not much, just browsing the web. Have you seen the new Bing chat mode?",
+      "text": "?",
       "timestamp": "2023-12-06T08:33:00Z"
     },
     {
       "sender_id": "111111111",
-      "text": "No, what is it?",
+      "text": "No.",
       "timestamp": "2023-12-06T08:34:00Z"
     },
     {
       "sender_id": "222222222",
-      "text": "It's a new feature that lets you chat with Bing and get answers or creative content quickly. It's pretty cool, you should try it.",
+      "text": "Yes",
       "timestamp": "2023-12-06T08:35:00Z"
     }
   ]

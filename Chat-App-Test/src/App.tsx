@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 
@@ -10,7 +8,7 @@ import ChatData from './components/ChatData'
 import ChatSendBox from './components/ChatSendBox'
 
 function App() {
-  const [chatData, setChatData] = useState(new ChatData("0", [], []));
+  const [chatData, setChatData] = useState(new ChatData("0","ERROR - LOADING CHAT NOT POSSIBLE", [], []));
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,7 +24,7 @@ function App() {
 
   return (
     <>
-      <ChatTitleBar Name={chatData.chat_id}/>
+      <ChatTitleBar Name={chatData.chat_name}/>
       <ChatArea Data={chatData}/>
       <ChatSendBox/>
       
