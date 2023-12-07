@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+
 import ChatTitleBar from './components/ChatTitleBar'
 import ChatArea from './components/ChatArea'
 import ChatData from './components/ChatData'
@@ -20,6 +21,8 @@ function App() {
  
     fetchData();
   }, []);
+
+
 
   return (
     <>
