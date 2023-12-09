@@ -15,24 +15,19 @@
   ],
   "messages": [
     {
-      "sender_id": "1",
-      "text": "Hi Alter Erik, how are you?",
+      "sender_id": "2",
+      "text": "Hi Erik, how are you?",
       "timestamp": "2023-12-06T08:30:00Z"
     },
     {
-      "sender_id": "2",
-      "text": "Hi Erik, I'm good, thanks. How about you?",
+      "sender_id": "1",
+      "text": "Hi Alter Erik, I'm good, thanks. How about you?",
       "timestamp": "2023-12-06T08:31:00Z"
     },
     {
-      "sender_id": "1",
+      "sender_id": "2",
       "text": "I'm fine, just busy with work. You have changed",
       "timestamp": "2023-12-06T08:32:00Z"
-    },
-    {
-      "sender_id": "2",
-      "text": "?",
-      "timestamp": "2023-12-06T08:33:00Z"
     },
     {
       "sender_id": "1",
