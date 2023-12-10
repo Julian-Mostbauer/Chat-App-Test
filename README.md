@@ -8,5 +8,5 @@ Made with Vite and React
 ![grafik](https://github.com/Julian-Mostbauer/Chat-App-Test/assets/146772868/8cc0a86c-32ed-4d6e-9c4b-3eb17dc30b42)
 
 ## Todo:
-- Add functionality to the send Button
 - Add style to the send Button
+- Fix Sender not working
