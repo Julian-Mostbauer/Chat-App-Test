@@ -1,26 +1,37 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "npm",
-			"script": "dev",
-			"path": "Chat-App-Test",
-			"problemMatcher": [],
-			"label": "npm: dev - Chat-App-Test",
-			"detail": "vite",
-			"group": "test"
-		},
-		{
-			"type": "npm",
-			"script": "install",
-			"path": "Chat-App-Test",
-			"group": {
-				"kind": "test",
-				"isDefault": true
-			},
-			"problemMatcher": [],
-			"label": "npm: install - Chat-App-Test",
-			"detail": "install dependencies from package"
-		}
-	]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Chat-App-Test",
+      "type": "shell",
+      "command": "cd Chat-App-Test; npm run dev",
+      "presentation": {
+        "panel": "dedicated"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run Backend-Server",
+      "type": "shell",
+      "command": "cd Backend-Server; nodemon server.js",
+      "presentation": {
+        "panel": "dedicated"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run Both",
+      "dependsOn": ["Run Chat-App-Test", "Run Backend-Server"],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    }
+  ]
 }

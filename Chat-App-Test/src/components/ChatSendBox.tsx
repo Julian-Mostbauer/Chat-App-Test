@@ -34,7 +34,7 @@ export default function ChatSendBox(Input: props) {
 
     const message = new Message(Input.Sender, text, timestamp)
 
-    console.log(JSON.stringify(message));
+    send_message(message);
     
   };
   
@@ -46,4 +46,20 @@ export default function ChatSendBox(Input: props) {
       </form>
     </div>
   );
+}
+
+
+function send_message(data: Message){
+  fetch('http://localhost:3000/save', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+  .then(response => response.text())
+  .then(data => console.log(data))
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 }
