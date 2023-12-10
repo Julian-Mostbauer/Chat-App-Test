@@ -35,8 +35,9 @@ export default function ChatSendBox(Input: props) {
     const message = new Message(Input.Sender, text, timestamp)
 
     console.log(JSON.stringify(message));
+    
   };
-
+  
   return (
     <div className="App">
       <form onSubmit={submitHandler}>
