@@ -1,5 +1,5 @@
 interface props {
-  Data: {sender_id: string; text: string; timestamp: string };
+  Data: {sender_id: string; text: string; timestamp: number };
   Participants: { name: string; id: string; avatar: string }[];
   CurrentUser_id: string
 }

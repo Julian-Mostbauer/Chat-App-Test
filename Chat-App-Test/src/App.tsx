@@ -6,9 +6,11 @@ import ChatTitleBar from './components/ChatTitleBar'
 import ChatArea from './components/ChatArea'
 import ChatData from './components/ChatData'
 import ChatSendBox from './components/ChatSendBox'
+import GetIP from './components/IP'
 
 function App() {
   const [chatData, setChatData] = useState(new ChatData("0","ERROR - LOADING CHAT NOT POSSIBLE", [], []));
+  const [IP, setIP] = useState("")
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,14 +22,14 @@ function App() {
     fetchData();
   }, []);
 
-
+  GetIP(setIP);
 
   return (
     <>
       <ChatTitleBar Name={chatData.chat_name}/>
+    <p>Logged in as {IP.padStart(3, "?")}</p> 
       <ChatArea Data={chatData}/>
-      <ChatSendBox/>
-      
+      <ChatSendBox Sender={IP}/>
     </>
   )
 }

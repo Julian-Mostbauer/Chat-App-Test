@@ -1,14 +1,41 @@
 import { useRef, useState } from "react";
 
-export default function ChatSendBox() {
-  const [val, setVal] = useState('');
+interface props {
+  Sender: string;
+}
+
+class Message {
+  sender_id: string;
+  text: string;
+  timestamp: number;
+
+  constructor(
+    sender_id: string,
+    text: string,
+    timestamp: number,
+  ) {
+    this.sender_id = sender_id;
+    this.text = text;
+    this.timestamp = timestamp;
+  }
+}
+
+export default function ChatSendBox(Input: props) {
   const inputRef = useRef();
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    setVal(inputRef.current.value);
-  }
+    const currentDate = new Date();
+    const timestamp = currentDate.getTime();
+
+    const text = inputRef.current.value;
+    inputRef.current.value = ""; // Clear Input Box
+
+    const message = new Message(Input.Sender, text, timestamp)
+
+    console.log(JSON.stringify(message));
+  };
 
   return (
     <div className="App">
@@ -16,8 +43,6 @@ export default function ChatSendBox() {
         <input ref={inputRef} />
         <button type="submit">Submit</button>
       </form>
-
-      <p>Submit Value: <b>{val}</b></p>
     </div>
   );
 }
