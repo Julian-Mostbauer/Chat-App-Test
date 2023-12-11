@@ -27,4 +27,4 @@ dist-ssr
 
 # Security
 src/components/URLs.tsx
-public
+public -f
