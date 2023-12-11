@@ -26,5 +26,5 @@ dist-ssr
 *.sw?
 
 # Security
-public/Data
 src/components/URLs.tsx
+public
