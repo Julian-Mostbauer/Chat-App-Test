@@ -4,13 +4,15 @@
   "participants": [
     {
       "name": "Erik",
-      "id": "1",
-      "avatar": "alice.jpg"
+      "id": "1"
     },
     {
       "name": "Alter Erik",
-      "id": "2",
-      "avatar": "bob.jpg"
+      "id": "2"
+    },
+    {
+      "name": "Julian",
+      "id": "194.24.159.128"
     }
   ],
   "messages": [
