@@ -20,10 +20,12 @@ export class ChatData {
 export class Participant{
   name: string;
   id: string;
+  timestamp: number;
 
-  constructor(name: string, id:string){
+  constructor(name: string, id:string,timestamp: number){
     this.name = name;
     this.id = id;
+    this.timestamp = timestamp;
   }
 }
 export class Message{

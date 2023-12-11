@@ -35,7 +35,11 @@ export default function ChatSendBox(Input: props) {
 
     const message = new Message(Input.Sender, text, timestamp)
 
-    send_message(message);
+    if(text != ""){
+      send_message(message);
+    }else{
+      inputRef.current.value = prompt("Enter your Message first")
+    }
     
   };
   

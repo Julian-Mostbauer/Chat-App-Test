@@ -19,7 +19,10 @@ export default function AccountSettings(Input: props) {
     const text = inputRef.current.value;
     inputRef.current.value = ""; // Clear Input Box
 
-    const newData = new Participant(text, Input.IP);
+    const currentDate = new Date();
+    const timestamp = currentDate.getTime();
+
+    const newData = new Participant(text, Input.IP, timestamp);
     change_name(newData);
   };
 

@@ -7,6 +7,7 @@ import {ChatData} from "./components/ChatData";
 import ChatSendBox from "./components/ChatSendBox";
 import GetIP from "./components/IP";
 import AccountSettings from "./components/AccountSettings";
+import Hash from "./components/Hash.tsx";
 
 function App() {
   const [chatData, setChatData] = useState(
@@ -25,13 +26,12 @@ function App() {
   }, []);
 
   GetIP(setIP);
-
   return (
     <>
-      <AccountSettings IP={IP}/>
+      <AccountSettings IP={Hash(IP)}/>
       <ChatTitleBar Name={chatData.chat_name} />
-      <ChatArea Data={chatData} IP={IP} />
-      <ChatSendBox Sender={IP} />
+      <ChatArea Data={chatData} IP={Hash(IP)} />
+      <ChatSendBox Sender={Hash(IP)} />
     </>
   );
 }

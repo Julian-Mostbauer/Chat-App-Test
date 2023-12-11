@@ -27,4 +27,5 @@ dist-ssr
 
 # Security
 src/components/URLs.tsx
+src/components/Hash.tsx
 public/Data
