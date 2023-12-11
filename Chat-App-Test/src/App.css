@@ -11,7 +11,6 @@
   font-weight: bold;
 
   /* text-shadow: 0px 1px 0px black; */
-
 }
 
 .card {
@@ -22,33 +21,25 @@
   color: #888;
 }
 
-.ChatTitleBarContainer{
+.ChatTitleBarContainer {
   border-radius: 1rem;
   border-style: solid;
-  border-color: #CDB4DB;
-  
-  background-color: #FFC8DD;
+  border-color: #cdb4db;
+
+  background-color: #ffc8dd;
   border-style: ridge;
 
+  top: 0;
+
   color: black;
-  transition: all ease-in-out 0.2s;  
 }
 
-
-.ChatTitleBarContainer:hover{
-  opacity: 70%;
-  /* border-color: #6192fbaa; */
-  
-  transition: all ease-in-out 0.2s;
-
-}
-
-.ChatArea{
+.ChatArea {
   border-radius: 1rem;
   border-style: solid;
-  border-color: #CDB4DB;
+  border-color: #cdb4db;
 
-  background-color: #FFC8DD;
+  background-color: #ffc8dd;
 
   margin-top: 1rem;
   padding: 1rem;
@@ -61,65 +52,65 @@
 
   /* animation-iteration-count: infinite; */
   /* animation-timing-function: linear;  */
-
-
 }
 
 @keyframes spin {
-  from{
+  from {
     transform: rotate(0deg);
-  }to{
+  }
+  to {
     transform: rotate(36035deg);
   }
 }
 
 @keyframes warp {
-  from{
-    transform:skew(-100deg,-100deg);
-  }to{
-    transform: skew(100deg,100deg);
+  from {
+    transform: skew(-100deg, -100deg);
+  }
+  to {
+    transform: skew(100deg, 100deg);
   }
 }
 
-.MessageContainer-Self{
-  background-color: #A2D2FF;
-  border-color: #BDE0FE;
-  
+.MessageContainer-Self {
+  background-color: #a2d2ff;
+  border-color: #bde0fe;
+
   border-radius: 1rem;
   border-style: ridge;
-  
+
   width: fit-content;
   padding: 0.5rem;
 
   min-width: 10rem;
-  
+
   margin-left: auto;
 }
-.MessageContainer-Other{
-  background-color: #FFAFCC;
-  border-color: #FFC8DD;
-  
+.MessageContainer-Other {
+  background-color: #ffafcc;
+  border-color: #ffc8dd;
+
   border-radius: 1rem;
   border-style: ridge;
-  
+
   min-width: 10rem;
 
   width: fit-content;
   padding: 0.5rem;
 }
 
-.MessageSenderName-Self{
+.MessageSenderName-Self {
   /* padding-bottom: 1rem; */
   font-size: x-small;
   color: #003566;
 
   text-align: right;
 }
-.MessageSenderName-Other{
+.MessageSenderName-Other {
   /* padding-bottom: 1rem; */
   font-size: x-small;
   color: #660025;
-  
+
   text-align: left;
 }
 
@@ -127,7 +118,21 @@
   text-align: right;
   color: #003566;
 }
-.MessageContent-Other{
+.MessageContent-Other {
   text-align: left;
-  color: #3D0016;
+  color: #3d0016;
+}
+
+.SettingMenu {
+  background-color: #D6EBFF;
+  border-radius: 1rem;
+  color: black;
+  padding: 8px;
+}
+
+.SettingButton {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  border-radius: 10rem;
 }
