@@ -4,6 +4,7 @@ import "reactjs-popup/dist/index.css";
 import { useRef, useState } from "react";
 
 import { Participant } from "./ChatData";
+import {getTunnel, getLocal} from "./URLs";
 
 interface props {
   IP: string;
@@ -43,7 +44,7 @@ export default function AccountSettings(Input: props) {
 }
 
 function change_name(newData: Participant) {
-  fetch("http://localhost:3000/rename", {
+  fetch(getTunnel() + "/rename", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

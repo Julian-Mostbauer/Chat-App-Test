@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import {getTunnel, getLocal} from "./URLs";
 
 interface props {
   Sender: string;
@@ -50,7 +51,7 @@ export default function ChatSendBox(Input: props) {
 
 
 function send_message(data: Message){
-  fetch('http://localhost:3000/save', {
+  fetch(getTunnel() + '/save', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -73,8 +73,8 @@ app.post("/rename", (req, res) => {
             console.error("Error writing file:", err);
             return res.status(500).send("Error writing file");
           } else {
-            res.status(200).send("Successfully wrote to file");
-            console.log("Successfully wrote to file");
+            res.status(200).send("Successfully renamed");
+            console.log("Successfully renamed");
           }
         }
       );
