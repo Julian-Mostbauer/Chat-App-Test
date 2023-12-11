@@ -1,6 +1,8 @@
+import { Participant } from "./ChatData";
+
 interface props {
   Data: {sender_id: string; text: string; timestamp: number };
-  Participants: { name: string; id: string; avatar: string }[];
+  Participants: Participant[];
   CurrentUser_id: string
 }
 
@@ -19,7 +21,7 @@ export default function Message(Input: props) {
 
 }
 
-function name_from_id(participant_data: { name: string; id: string; avatar: string }[], id: string) {
+function name_from_id(participant_data: Participant[], id: string) {
   let search_result = "error - unable to find sender";
   participant_data.forEach((participant) => {
     if (participant.id == id) {

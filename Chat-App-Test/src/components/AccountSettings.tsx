@@ -4,10 +4,10 @@ import "reactjs-popup/dist/index.css";
 import { useRef, useState } from "react";
 
 import { Participant } from "./ChatData";
-import {getTunnel, getLocal} from "./URLs";
 
 interface props {
   IP: string;
+  Adress:string;
 }
 
 export default function AccountSettings(Input: props) {
@@ -23,7 +23,7 @@ export default function AccountSettings(Input: props) {
     const timestamp = currentDate.getTime();
 
     const newData = new Participant(text, Input.IP, timestamp);
-    change_name(newData);
+    change_name(newData, Input.Adress);
   };
 
   return (
@@ -46,8 +46,8 @@ export default function AccountSettings(Input: props) {
   );
 }
 
-function change_name(newData: Participant) {
-  fetch(getTunnel() + "/rename", {
+function change_name(newData: Participant, adress:string) {
+  fetch(adress + "/rename", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

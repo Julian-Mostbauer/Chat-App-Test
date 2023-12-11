@@ -4,8 +4,9 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors());
-
 app.use(express.json()); // for parsing application/json
+
+app.disable('x-powered-by')
 
 app.post("/save", (req, res) => {
   const newMessage = req.body;
@@ -53,9 +54,9 @@ app.post("/save", (req, res) => {
 
 app.post("/rename", (req, res) => {
   const newData = req.body;
-  console.log("--------------------------------------------")
+  console.log("--------------------------------------------");
   console.log(req);
-  console.log("--------------------------------------------")
+  console.log("--------------------------------------------");
 
   if (securityCheck(newData)) {
     fs.readFile(
@@ -100,6 +101,9 @@ app.post("/rename", (req, res) => {
         );
       }
     );
+  }else{
+    console.error("Invalid Identifier", JSON.stringify(newMessage));
+    return res.status(400).send("Error - Invalid Identifier");
   }
 });
 
@@ -120,6 +124,5 @@ function getDiff(messageTimestamp) {
 function securityCheck(newMessage) {
   const diff = getDiff(Number(newMessage.timestamp));
 
-  return diff > 0 && diff < 2000;
+  return diff > 0 && diff < 3000;
 }
-

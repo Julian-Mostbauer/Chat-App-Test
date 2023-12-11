@@ -8,6 +8,7 @@ import ChatSendBox from "./components/ChatSendBox";
 import GetIP from "./components/IP";
 import AccountSettings from "./components/AccountSettings";
 import Hash from "./components/Hash.tsx";
+import {getTunnel, getLocal} from "./components/URLs";
 
 function App() {
   const [chatData, setChatData] = useState(
@@ -26,12 +27,15 @@ function App() {
   }, []);
 
   GetIP(setIP);
+
+  const ServerAdress = getLocal();
+
   return (
     <>
-      <AccountSettings IP={Hash(IP)}/>
+      <AccountSettings IP={Hash(IP)} Adress={ServerAdress}/>
       <ChatTitleBar Name={chatData.chat_name} />
-      <ChatArea Data={chatData} IP={Hash(IP)} />
-      <ChatSendBox Sender={Hash(IP)} />
+      <ChatArea Data={chatData} IP={Hash(IP)}/>
+      <ChatSendBox Sender={Hash(IP)} Adress={ServerAdress}/>
     </>
   );
 }

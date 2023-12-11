@@ -1,5 +1,5 @@
 import Message from './Message.tsx'
-import ChatData from './ChatData'
+import {ChatData} from './ChatData'
 interface props {
   Data: ChatData;
   IP: string
