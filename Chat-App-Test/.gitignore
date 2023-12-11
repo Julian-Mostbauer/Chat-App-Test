@@ -9,6 +9,7 @@ lerna-debug.log*
 history.json*
 Backup.json*
 
+public/Data
 node_modules
 dist
 dist-ssr
