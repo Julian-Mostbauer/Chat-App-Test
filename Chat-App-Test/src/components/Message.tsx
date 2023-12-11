@@ -11,7 +11,7 @@ export default function Message(Input: props) {
   return (
     <>
     <div className={"MessageContainer-" + owner_status}>
-      <p className={"MessageSenderName-" + owner_status}>{name}</p>
+      <p className={"MessageSenderName-" + owner_status}>{name != "error - unable to find sender" ? name : Input.CurrentUser_id}</p>
       <p className={"MessageContent-" + owner_status}>{data.text}</p>
     </div>
     </>

@@ -28,7 +28,7 @@ function App() {
     <>
       <ChatTitleBar Name={chatData.chat_name}/>
     <p>Logged in as {IP.padStart(3, "?")}</p> 
-      <ChatArea Data={chatData}/>
+      <ChatArea Data={chatData} IP={IP}/>
       <ChatSendBox Sender={IP}/>
     </>
   )
