@@ -32,10 +32,10 @@ function App() {
 
   return (
     <>
-      <AccountSettings IP={Hash(IP)} Adress={ServerAdress}/>
+      <AccountSettings IP={Hash(IP)} Adress={ServerAdress} UpdateFunction={setChatData}/>
       <ChatTitleBar Name={chatData.chat_name} />
       <ChatArea Data={chatData} IP={Hash(IP)}/>
-      <ChatSendBox Sender={Hash(IP)} Adress={ServerAdress}/>
+      <ChatSendBox Sender={Hash(IP)} Adress={ServerAdress} UpdateFunction={setChatData}/>
     </>
   );
 }

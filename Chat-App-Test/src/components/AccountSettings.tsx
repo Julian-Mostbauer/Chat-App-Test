@@ -1,13 +1,14 @@
 import React from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import { useRef, useState } from "react";
+import { useRef, useEffect } from "react";
 
 import { Participant } from "./ChatData";
 
 interface props {
   IP: string;
   Adress:string;
+  UpdateFunction: any;
 }
 
 export default function AccountSettings(Input: props) {
@@ -25,6 +26,16 @@ export default function AccountSettings(Input: props) {
     const newData = new Participant(text, Input.IP, timestamp);
     change_name(newData, Input.Adress);
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("Data/history.json");
+      const data = await response.text();
+      console.log(data)
+      Input.UpdateFunction(JSON.parse(data));
+    };
+    fetchData();
+  }, [Input]);
 
   return (
     <>

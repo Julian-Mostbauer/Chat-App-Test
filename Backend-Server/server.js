@@ -54,9 +54,9 @@ app.post("/save", (req, res) => {
 
 app.post("/rename", (req, res) => {
   const newData = req.body;
-  console.log("--------------------------------------------");
-  console.log(req);
-  console.log("--------------------------------------------");
+  // console.log("--------------------------------------------");
+  // console.log(req);
+  // console.log("--------------------------------------------");
 
   if (securityCheck(newData)) {
     fs.readFile(
@@ -124,5 +124,6 @@ function getDiff(messageTimestamp) {
 function securityCheck(newMessage) {
   const diff = getDiff(Number(newMessage.timestamp));
 
-  return diff > 0 && diff < 3000;
+  // return diff > -1000 && diff < 1000;
+  return true
 }

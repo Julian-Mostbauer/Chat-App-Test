@@ -1,20 +1,13 @@
 import { FormEventHandler, useRef } from "react";
+import {Message} from "./ChatData";
+import { useState, useEffect } from "react";
+import UpdateChat from "./UpdateChat";
+import { ChatData } from "./ChatData";
 
 interface props {
   Sender: string;
   Adress: string;
-}
-
-class Message {
-  sender_id: string;
-  text: string;
-  timestamp: number;
-
-  constructor(sender_id: string, text: string, timestamp: number) {
-    this.sender_id = sender_id;
-    this.text = text;
-    this.timestamp = timestamp;
-  }
+  UpdateFunction: any;
 }
 
 export default function ChatSendBox(Input: props) {
@@ -36,7 +29,19 @@ export default function ChatSendBox(Input: props) {
     } else {
       inputRef.current.value = prompt("Enter your Message first");
     }
+
   };
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("Data/history.json");
+      const data = await response.text();
+      console.log(data)
+      Input.UpdateFunction(JSON.parse(data));
+    };
+    fetchData();
+  }, [Input]);
 
   return (
     <div className="App">
