@@ -9,10 +9,11 @@ import GetIP from "./components/IP";
 import AccountSettings from "./components/AccountSettings";
 import Hash from "./components/Hash.tsx";
 import {getTunnel, getLocal} from "./components/URLs";
+import { DummyHistory } from "./components/DummyHistory.tsx";
 
 function App() {
   const [chatData, setChatData] = useState(
-    new ChatData("0", "ERROR - LOADING CHAT NOT POSSIBLE", [], [])
+    DummyHistory()
   );
   const [IP, setIP] = useState("");
 
@@ -28,7 +29,7 @@ function App() {
 
   GetIP(setIP);
 
-  const ServerAdress = getLocal();
+  const ServerAdress = getTunnel();
 
   return (
     <>

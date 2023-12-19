@@ -48,10 +48,9 @@
 
   /* animation-name: warp; */
   /* animation-name: spin; */
-  /* animation-duration: 10000ms; */
-
-  /* animation-iteration-count: infinite; */
-  /* animation-timing-function: linear;  */
+  animation-duration: 100000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
 }
 
 @keyframes spin {
@@ -85,6 +84,7 @@
   min-width: 10rem;
 
   margin-left: auto;
+  transition: all ease-in-out 0.15s;
 }
 .MessageContainer-Other {
   background-color: #ffafcc;
@@ -97,7 +97,31 @@
 
   width: fit-content;
   padding: 0.5rem;
+
+  transition: all ease-in-out 0.15s;
 }
+
+.MessageContainer-Other:hover {
+  background-color: #efa5c0;
+  border-color: #efbdd0;
+
+  border-style:dotted;
+
+  padding: 0.65rem;
+  
+  transition: all ease-in-out 0.15s;
+}
+.MessageContainer-Self:hover {
+  background-color: #94c0e8;
+  border-color: #accae4;
+  
+  border-style:dotted;
+
+  padding: 0.65rem;
+
+  transition: all ease-in-out 0.15s;
+}
+
 
 .MessageSenderName-Self {
   /* padding-bottom: 1rem; */
