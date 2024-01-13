@@ -24,18 +24,18 @@ export default function AccountSettings(Input: props) {
 
     const newData = new Participant(text, Input.IP, timestamp);
     change_name(newData, Input.Adress);
+    
   };
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch("Data/history.json");
-      const data = await response.text();
-      console.log(data)
-      Input.UpdateFunction(JSON.parse(data));
-    };
-    fetchData();
-  }, [Input]);
-
+    //useEffect(() => {
+    //  const fetchData = async () => {
+    //    const response = await fetch("Data/history.json");
+    //    const data = await response.text();
+    //    console.log(data)
+    //    Input.UpdateFunction(JSON.parse(data));
+    //  };
+    //  fetchData();
+    //}, [Input]);
+    
   return (
     <>
       <Popup

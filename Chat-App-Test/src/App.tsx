@@ -21,15 +21,16 @@ function App() {
     const fetchData = async () => {
       const response = await fetch("Data/history.json");
       const data = await response.text();
+      //await new Promise(resolve => setTimeout(resolve, 1000));
       setChatData(JSON.parse(data));
     };
-
+    
     fetchData();
   }, []);
 
   GetIP(setIP);
 
-  const ServerAdress = getLocal();
+  const ServerAdress = getTunnel();
 
   return (
     <>

@@ -29,20 +29,20 @@ export default function ChatSendBox(Input: props) {
     } else {
       inputRef.current.value = prompt("Enter your Message first");
     }
-
+  
   };
-
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch("Data/history.json");
       const data = await response.text();
       console.log(data)
+      await new Promise(resolve => setTimeout(resolve, 1000));
       Input.UpdateFunction(JSON.parse(data));
     };
     fetchData();
   }, [Input]);
-
+  
   return (
     <div className="App">
       <form onSubmit={submitHandler}>
