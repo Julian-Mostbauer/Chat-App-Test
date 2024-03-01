@@ -30,7 +30,7 @@ function App() {
 
   GetIP(setIP);
 
-  const ServerAdress = getTunnel();
+  const ServerAdress = getLocal();
 
   return (
     <>

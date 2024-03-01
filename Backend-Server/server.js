@@ -1,10 +1,13 @@
-const express = require("express");
-const fs = require("fs");
-const cors = require("cors");
+import express from "express";
+import fs from "fs";
+import cors from "cors";
 
 const app = express();
+
 app.use(cors());
 app.use(express.json()); // for parsing application/json
+
+import { json_path } from './secret.js'
 
 app.disable('x-powered-by')
 
@@ -13,7 +16,7 @@ app.post("/save", (req, res) => {
 
   if (securityCheck(newMessage)) {
     fs.readFile(
-      "C:/Users/julia/OneDrive/Dokumente/GitHub/Chat-App-Test/Chat-App-Test/public/Data/history.json",
+      json_path,
       "utf8",
       (err, data) => {
         if (err) {
@@ -25,7 +28,7 @@ app.post("/save", (req, res) => {
         obj.messages.push(newMessage);
 
         fs.writeFile(
-          "C:/Users/julia/OneDrive/Dokumente/GitHub/Chat-App-Test/Chat-App-Test/public/Data/history.json",
+          json_path,
           JSON.stringify(obj, null, 2),
           (err) => {
             if (err) {
@@ -60,7 +63,7 @@ app.post("/rename", (req, res) => {
 
   if (securityCheck(newData)) {
     fs.readFile(
-      "C:/Users/julia/OneDrive/Dokumente/GitHub/Chat-App-Test/Chat-App-Test/public/Data/history.json",
+      json_path,
       "utf8",
       (err, data) => {
         if (err) {
@@ -83,7 +86,7 @@ app.post("/rename", (req, res) => {
         }
 
         fs.writeFile(
-          "C:/Users/julia/OneDrive/Dokumente/GitHub/Chat-App-Test/Chat-App-Test/public/Data/history.json",
+          json_path,
           JSON.stringify(obj, null, 2),
           (err) => {
             if (err) {
